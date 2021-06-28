@@ -20,7 +20,6 @@ class SecondFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val texto = texto
         Toast.makeText(requireActivity(), texto, Toast.LENGTH_SHORT).show()
     }
 }

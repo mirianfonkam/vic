@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FirstFragment : Fragment(){
 
-    lateinit var listAdapter : ListAdapter
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,7 +20,7 @@ class FirstFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val rv = view.findViewById<RecyclerView>(R.id.rvListPeople)
-        listAdapter = ListAdapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
+        val listAdapter = ListAdapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
         rv.adapter = listAdapter
         rv.layoutManager = LinearLayoutManager(requireActivity())
     }
