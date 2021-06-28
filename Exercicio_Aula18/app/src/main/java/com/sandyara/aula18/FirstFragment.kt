@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class First : Fragment(){
+class FirstFragment : Fragment(){
 
-    lateinit var ADAPTER2 : Adapter
+    lateinit var listAdapter : ListAdapter
     lateinit var ADAPTER : Adapter2
 
     override fun onCreateView(
@@ -18,13 +18,13 @@ class First : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.screen2, container, false)
+        return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val rv = view.findViewById<RecyclerView>(R.id.recyclerview1)
-        ADAPTER2 = Adapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
-        rv.adapter = ADAPTER2
+        val rv = view.findViewById<RecyclerView>(R.id.rvListPeople)
+        listAdapter = ListAdapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
+        rv.adapter = listAdapter
         rv.layoutManager = LinearLayoutManager(requireActivity())
     }
 }

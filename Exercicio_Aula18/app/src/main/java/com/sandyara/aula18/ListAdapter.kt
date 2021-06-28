@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapter(var data : List<String>) :
-    RecyclerView.Adapter<Adapter.ViewHolder>() {
+class ListAdapter(var data : List<String>) :
+    RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var textView: TextView =  view.findViewById(R.id.teste)

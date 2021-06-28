@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
-class MainScreen : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.screen)
+        setContentView(R.layout.activity_main)
 
         val viewpager = findViewById<ViewPager>(R.id.viewpager1)
         viewpager.adapter = Adapter2(supportFragmentManager)

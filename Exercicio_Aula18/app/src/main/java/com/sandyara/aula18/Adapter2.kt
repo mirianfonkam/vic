@@ -10,11 +10,11 @@ class Adapter2(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     }
 
     override fun getItem(position: Int): Fragment {
-        var fragment: Fragment = First()
+        var fragment: Fragment = FirstFragment()
         if(position == 0){
-            fragment = First()
+            fragment = FirstFragment()
         } else if(position == 1){
-            fragment = Second()
+            fragment = SecondFragment()
         }
 
         return fragment
