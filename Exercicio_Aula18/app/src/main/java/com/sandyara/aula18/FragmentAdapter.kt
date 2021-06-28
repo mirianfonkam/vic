@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 
-class Adapter2(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+class FragmentAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getCount(): Int {
         return 2
     }
@@ -21,14 +21,14 @@ class Adapter2(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        var x: String = ""
+        var tabPageTitle: String = ""
         if(position == 0){
-            x = "Primeiro"
+            tabPageTitle = "Primeiro"
         } else if(position == 1){
-            x = "Segundo"
+            tabPageTitle = "Segundo"
         }
 
-        return x
+        return tabPageTitle
     }
 
 }

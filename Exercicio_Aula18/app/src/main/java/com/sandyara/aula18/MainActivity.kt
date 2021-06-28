@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewpager = findViewById<ViewPager>(R.id.viewpager1)
-        viewpager.adapter = Adapter2(supportFragmentManager)
-        val tablayout = findViewById<TabLayout>(R.id.tablayout1)
-        tablayout.setupWithViewPager(viewpager)
+        val viewPager = findViewById<ViewPager>(R.id.viewPager)
+        viewPager.adapter = FragmentAdapter(supportFragmentManager)
+        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        tabLayout.setupWithViewPager(viewPager)
     }
 }
