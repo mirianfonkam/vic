@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 class FirstFragment : Fragment(){
 
     lateinit var listAdapter : ListAdapter
-    lateinit var ADAPTER : Adapter2
 
     override fun onCreateView(
         inflater: LayoutInflater,
