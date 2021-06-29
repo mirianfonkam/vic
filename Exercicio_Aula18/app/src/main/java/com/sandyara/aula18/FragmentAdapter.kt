@@ -10,25 +10,17 @@ class FragmentAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     }
 
     override fun getItem(position: Int): Fragment {
-        var fragment: Fragment = FirstFragment()
-        if(position == 0){
-            fragment = FirstFragment()
-        } else if(position == 1){
-            fragment = SecondFragment()
-        }
-
-        return fragment
+       return when (position){
+           1 -> SecondFragment()
+           else -> FirstFragment()
+       }
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        var tabPageTitle: String = ""
-        if(position == 0){
-            tabPageTitle = "Primeiro"
-        } else if(position == 1){
-            tabPageTitle = "Segundo"
+        return when (position) {
+            1 -> "Segundo"
+            else -> "Primeiro"
         }
-
-        return tabPageTitle
     }
 
 }

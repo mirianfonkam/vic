@@ -10,7 +10,7 @@ class ListAdapter(var data : List<String>) :
     RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var textView: TextView =  view.findViewById(R.id.teste)
+        var textView: TextView =  view.findViewById(R.id.tvListItem)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {

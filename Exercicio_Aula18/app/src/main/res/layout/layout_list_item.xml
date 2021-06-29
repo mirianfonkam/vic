@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/teste"
-        android:tools="teste"
+        android:id="@+id/tvListItem"
+        tools:text="teste"
         android:textSize="18sp"
         android:textStyle="italic"
         android:layout_margin="24dp"

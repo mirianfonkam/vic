@@ -19,9 +19,9 @@ class FirstFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val rv = view.findViewById<RecyclerView>(R.id.rvListPeople)
+        val rvListPeople = view.findViewById<RecyclerView>(R.id.rvListPeople)
         val listAdapter = ListAdapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
-        rv.adapter = listAdapter
-        rv.layoutManager = LinearLayoutManager(requireActivity())
+        rvListPeople.adapter = listAdapter
+        rvListPeople.layoutManager = LinearLayoutManager(requireActivity())
     }
 }
