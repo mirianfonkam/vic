@@ -5,14 +5,13 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(R.layout.activity_home) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
-        val vwpFragment = findViewById<ViewPager>(R.id.vwpFragment)
-        vwpFragment.adapter = FragmentAdapter(supportFragmentManager)
+        val vpFragment = findViewById<ViewPager>(R.id.vpFragment)
+        vpFragment.adapter = FragmentAdapter(supportFragmentManager)
         val tblMenu = findViewById<TabLayout>(R.id.tblMenu)
-        tblMenu.setupWithViewPager(vwpFragment)
+        tblMenu.setupWithViewPager(vpFragment)
     }
 }

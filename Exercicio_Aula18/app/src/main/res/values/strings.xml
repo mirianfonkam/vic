@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Aula18</string>
     <string name="under_construction">Ainda\nem\nconstrução</string>
+    <string name="warning_text">Ainda está em construção</string>
 </resources>

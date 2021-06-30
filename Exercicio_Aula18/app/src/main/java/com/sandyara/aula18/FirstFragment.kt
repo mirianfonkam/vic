@@ -8,20 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class FirstFragment : Fragment(){
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_first, container, false)
-    }
-
+class FirstFragment : Fragment(R.layout.fragment_first){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val rvListPeople = view.findViewById<RecyclerView>(R.id.rvListPeople)
         val listAdapter = ListAdapter(listOf("Nome: Sandy, Idade: 21", "Nome: Joana, Idade: 23"))
         rvListPeople.adapter = listAdapter
-        rvListPeople.layoutManager = LinearLayoutManager(requireActivity())
     }
 }
